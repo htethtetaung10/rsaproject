@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div id="container_message">
+        <div class="message">Original message: {{ original_m1 }}, {{ original_m2 }}, {{ original_m3 }}</div>
+        <div class="message">Encrypted message: {{ encrypted_m1 }}, {{ encrypted_m2 }}, {{ encrypted_m3 }}</div>
+        <div class="message">Decrypted message: {{ decrypted_m1 }}, {{ decrypted_m2 }}, {{ decrypted_m3 }}</div>
+        <br/>
+        <form method="GET" action="back">
+            {%  csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="back">Back</button>
+        </form>   
+    </div>
+      
+{% endblock %}

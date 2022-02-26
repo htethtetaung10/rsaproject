@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {% block content %}
+        <form method="GET" action="enc_dec">
+            {%  csrf_token %}
+            {{ form.as_p }}
+            <input type="text" name="message1" placeholder="Enter your message (number)" /><br/>
+            <input type="text" name="message2" placeholder="Enter your message (number)" /><br/>
+            <input type="text" name="message3" placeholder="Enter your message (number)" /><br/>
+            <button type="submit" name="encrypt">Encrypt</button>
+        </form>
+    {% endblock %}
+{% endblock %}
