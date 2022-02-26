@@ -1,1 +1,1 @@
-web: gunicorn rsa_project.wsgi:application --log-file -
+web: gunicorn rsa_project.wsgi: --log-file -
