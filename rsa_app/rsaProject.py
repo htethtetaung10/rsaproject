@@ -34,8 +34,8 @@ def main():
 
 def encryptionAlg(m):
     #Choosing random p and q
-    p = randomPrime(2, 63)
-    q = randomPrime(2, 63)
+    p = randomPrime(2, 255)
+    q = randomPrime(2, 255)
     print("p and q:", p, q)
     print("/n")
 
